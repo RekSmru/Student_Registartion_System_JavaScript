@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+/* Page Background */
+body{
+font-family: 'Arial', sans-serif;
+font-size: 16px;
+background-image: linear-gradient(to right, lightpink 0%, lightgreen 100%); 
+justify-content: center; 
+min-height: 200vh;
+padding: 30px;
+}
+/* page heading */
+h2 {
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}  
+label {
+    font-weight: bold;
+    gap: 10px;
+}
+/* Form */
+.studentForm {
+    margin-top: 10%;  
+    gap: 10px; 
+    justify-content: space-between;;  
+    display: grid;
+    float : left;
+}
+input{
+    width: 300px;          
+    height: 10px;                     
+    border-radius: 10px;
+    padding: 10px; 
+    border: 1px solid #ccc;              
+}
+button{
+    width: 100px;           
+    height: 40px;                       
+    border-radius: 10px;
+    background-color: blue;        
+    color: white;                       
+    border: 1px solid #ccc;                       
+    cursor: pointer;                     
+    transition: background-color 0.3s, transform 0.2s; 
+    
+}
+button:hover {
+    background-color: #155ab6;          
+    transform: translateY(-2px);        
+}
+button:active {
+    background-color: #0f3c8c;
+    transform: translateY(0);
+}
+
+.right{
+    /* float: right; */
+    display: grid;
+    margin-top: 20%;  
+    gap: 10px; 
+    justify-content: right; 
+}
+#tableContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+thead {
+    background-color: white;
+    color: black;
+    border: 1px solid black (160, 160, 160); /* Borders for all cells */
+    padding: 8px 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(160, 160, 160); /* Borders for all cells */
+    padding: 8px 10px;
+    
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+td button:first-child {
+    background: #2196F3;
+    color: white;
+}
+
+td button:last-child {
+    background: #f44336;
+    color: white;
+}
+
+td button:hover {
+    opacity: 0.8;
+}
+/* ----------------------------------
+   📱 MOBILE (≤ 640px)
+-----------------------------------*/
+@media (max-width: 640px) {
+
+    body {
+        background: linear-gradient(to bottom, lightpink 50%, lightgreen 50%);
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .studentForm,
+    .right {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+}
+
+/* ----------------------------------
+   📱 TABLET (641px – 1024px)
+-----------------------------------*/
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .studentForm,
+    .right {
+        width: 100%;
+    }
+
+    #tableContainer {
+        max-height: 350px;
+    }
+}
+
+/* ----------------------------------
+   🖥️ DESKTOP (≥ 1025px)
+-----------------------------------*/
+@media (min-width: 1025px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .studentForm {
+        flex: 1;
+    }
+
+    .right {
+        flex: 1.6;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
